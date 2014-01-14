@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <Button
+        android:id="@+id/sharedSinaWeiBoBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="分享到新浪微博" />
+    <Button
+        android:id="@+id/sharedTecentWeiBoBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="分享到腾讯微博" />
+    
+    <Button
+        android:id="@+id/sharedQQZoneBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="分享到QQ空间" />
+    <Button
+        android:id="@+id/sharedWeiXinBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="分享到微信" />
+    
+    <Button
+        android:id="@+id/sharedShortMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="短信分享" />
+    
+    <Button
+        android:id="@+id/sharedListBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="分享列表" />
+    
+    
+    
+
+</LinearLayout>
