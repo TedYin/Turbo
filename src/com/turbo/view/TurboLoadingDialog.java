@@ -209,7 +209,8 @@ public class TurboLoadingDialog extends Dialog{
 			timerTask.cancel();
 			timerTask = null;
 		}
-		mActivity.runOnUiThread(endLoadingAction);
+		if(mActivity != null)
+		    mActivity.runOnUiThread(endLoadingAction);
 		DELAY_TIME = 0;
 	}
 	
@@ -229,12 +230,12 @@ public class TurboLoadingDialog extends Dialog{
 	private static Runnable endLoadingAction = new Runnable() {
 		@Override
 		public void run() {
-			if(dialog != null && dialog.isShowing()){
-				dialog.dismiss();
-				dialog = null;
-				if(mCallBack != null)
-					mCallBack.onDimss();
-			}
+		    if(dialog != null && dialog.isShowing()){
+	            dialog.dismiss();
+	            dialog = null;
+	            if(mCallBack != null)
+	                mCallBack.onDimss();
+	        }
 		}
 	};
 	
