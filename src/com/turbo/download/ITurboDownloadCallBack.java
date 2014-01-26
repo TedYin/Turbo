@@ -33,7 +33,7 @@ public interface ITurboDownloadCallBack {
      * 正在下载
      * @param progress
      */
-    public void onDownloading(int progress);
+    public void onDownloading(float progress);
     
     /**
      * 下载出错

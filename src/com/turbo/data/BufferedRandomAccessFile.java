@@ -1,10 +1,9 @@
 package com.turbo.data;
 
-import java.io.RandomAccessFile;
 import java.io.File;
-import java.io.IOException;
 import java.io.FileNotFoundException;
-import java.util.ResourceBundle;
+import java.io.IOException;
+import java.io.RandomAccessFile;
 
 /**
  * <p>Title: BufferedRandomAccessFile</p>
@@ -12,12 +11,12 @@ import java.util.ResourceBundle;
  * <p>Copyright: Copyright (c) 2002 Cui Zhixiang </p>
  * <p>Company: soho </p>
  * @author Cui Zhixiang
+ * @modify Ted
  * @version 1.0, 2002/10/12
  */
 
 public class BufferedRandomAccessFile extends RandomAccessFile {
 
-    static ResourceBundle res = ResourceBundle.getBundle("kbps.io.Res");
     private static final int DEFAULT_BUFFER_BIT_LEN = 10;
     private static final int DEFAULT_BUFFER_SIZE = 1 << DEFAULT_BUFFER_BIT_LEN;
 
@@ -36,21 +35,30 @@ public class BufferedRandomAccessFile extends RandomAccessFile {
     protected boolean append;
     protected String filename;
     protected long initfilelen;
+    
+    /**
+     * 打开方式
+     * @author Ted
+     */
+    public interface MODE{
+        public static final String WRITE = "rw";
+        public static final String READ = "r";
+    }
 
     public BufferedRandomAccessFile(String name) throws  IOException {
-        this(name, res.getString("r"), DEFAULT_BUFFER_BIT_LEN);
+        this(name, MODE.READ, DEFAULT_BUFFER_BIT_LEN);
     }
 
     public BufferedRandomAccessFile(File file) throws IOException, FileNotFoundException {
-        this(file.getPath(), res.getString("r"), DEFAULT_BUFFER_BIT_LEN);
+        this(file.getPath(), MODE.READ, DEFAULT_BUFFER_BIT_LEN);
     }
 
     public BufferedRandomAccessFile(String name, int bufbitlen) throws  IOException {
-        this(name, res.getString("r"), bufbitlen);
+        this(name, MODE.READ, bufbitlen);
     }
 
     public BufferedRandomAccessFile(File file, int bufbitlen) throws IOException, FileNotFoundException {
-        this(file.getPath(), res.getString("r"), bufbitlen);
+        this(file.getPath(), MODE.READ, bufbitlen);
     }
 
     public BufferedRandomAccessFile(String name, String mode) throws IOException {
@@ -71,7 +79,7 @@ public class BufferedRandomAccessFile extends RandomAccessFile {
     }
 
     private void init(String name, String mode, int bufbitlen) throws IOException {
-        if (mode.equals(res.getString("r")) == true) {
+        if (mode.equals(MODE.READ)) {
             this.append = false;
         } else {
             this.append = true;
@@ -83,7 +91,7 @@ public class BufferedRandomAccessFile extends RandomAccessFile {
         this.curpos = super.getFilePointer();
 
         if (bufbitlen < 0) {
-            throw new IllegalArgumentException(res.getString("bufbitlen_size_must_0"));
+            throw new IllegalArgumentException("bufbitlen size must >= 0");
         }
 
         this.bufbitlen = bufbitlen;
