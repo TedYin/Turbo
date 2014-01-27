@@ -1,9 +1,9 @@
 package com.turbo.app;
 
-import com.turbo.net.VolleyNetHelper;
-
 import android.app.Application;
 import android.content.Context;
+
+import com.turbo.net.VolleyNetHelper;
 
 public class TurboBaseApp extends Application {
 	private static Context appContext;

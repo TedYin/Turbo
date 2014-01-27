@@ -9,13 +9,17 @@ import com.turbo.TurboLog;
 import com.turbo.data.BufferedRandomAccessFile;
 import com.turbo.pool.TurboBaseTask;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+
+/**
+ * 下载执行类
+ * @author Ted
+ */
 public class TurboDownloadTask extends TurboBaseTask {
     private int READ_TIME_OUT = 20000;// 读取超时时间
     private static Handler handler = new Handler(Looper.getMainLooper());
@@ -29,11 +33,13 @@ public class TurboDownloadTask extends TurboBaseTask {
 
     @Override
     public Object execute() {
-        //判断是否已经下载完成的 
+        //开始下载
+        postOnStart(bean);
+        //判断是否已经下载完成 
         if(bean.getOutFile() != null&& bean.getOutFile().length() == bean.getTotoalSrcSize()){
             // 下载完成
             com.turbo.TurboLog.e("文件已存在，下载完成！");
-            postOnFinish(bean.getOutFile());
+            postOnFinish(bean);
             return bean;
         }
         
@@ -48,6 +54,7 @@ public class TurboDownloadTask extends TurboBaseTask {
             conn.setReadTimeout(READ_TIME_OUT);
             conn.setRequestProperty("Range", "bytes=" + bean.getStartPosition() + "-");
             conn.connect();
+            
             /**
              * 执行下载写入操作
              */
@@ -80,23 +87,23 @@ public class TurboDownloadTask extends TurboBaseTask {
                 // 下载完成
                 ras.close();
                 is.close();
-                postOnFinish(bean.getOutFile());
+                postOnFinish(bean);
             } else {
                 // 下载出错
                 if(isCanceled()){
-                    postOnCancel(bean.getOutFile());
+                    postOnCancel(bean);
                 }else if(isPaused()){
-                    postOnPause(bean.getOutFile());
+                    postOnPause(bean);
                 }else{
                     postOnError(new TurboException("下载失败，请重试！"));
                 }
             }
         } catch (MalformedURLException e) {
             e.printStackTrace();
-            postOnError(new TurboException(e.getMessage()));
+            postOnError(new TurboException(e.toString()));
         } catch (IOException e) {
             e.printStackTrace();
-            postOnError(new TurboException(e.getMessage()));
+            postOnError(new TurboException(e.toString()));
         } finally {
             try {
                 if (is != null) {
@@ -118,17 +125,31 @@ public class TurboDownloadTask extends TurboBaseTask {
     public Object complete(Object obj) {
         return obj;
     }
+    
+    /**
+     * 开始下载
+     * 
+     * @param bean
+     */
+    private void postOnStart(final TurboDownloadBean bean) {
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                callBack.onStart(bean);
+            }
+        });
+    }
 
     /**
      * 完成下载
      * 
-     * @param outFile
+     * @param bean
      */
-    private void postOnFinish(final File outFile) {
+    private void postOnFinish(final TurboDownloadBean bean) {
         handler.post(new Runnable() {
             @Override
             public void run() {
-                callBack.onFinish(outFile);
+                callBack.onFinish(bean);
             }
         });
     }
@@ -136,13 +157,13 @@ public class TurboDownloadTask extends TurboBaseTask {
     /**
      * 取消下载
      * 
-     * @param outFile
+     * @param bean
      */
-    private void postOnCancel(final File outFile) {
+    private void postOnCancel(final TurboDownloadBean bean) {
         handler.post(new Runnable() {
             @Override
             public void run() {
-                callBack.onCancel(outFile);
+                callBack.onCancel(bean);
             }
         });
     }
@@ -150,13 +171,13 @@ public class TurboDownloadTask extends TurboBaseTask {
     /**
      * 暂停下载
      * 
-     * @param outFile
+     * @param bean
      */
-    private void postOnPause(final File outFile) {
+    private void postOnPause(final TurboDownloadBean bean) {
         handler.post(new Runnable() {
             @Override
             public void run() {
-                callBack.onPause(outFile);
+                callBack.onPause(bean);
             }
         });
     }
@@ -200,14 +221,14 @@ public class TurboDownloadTask extends TurboBaseTask {
         if (isCanceled()) {
             ras.close();
             is.close();
-            postOnCancel(bean.getOutFile());
+            postOnCancel(bean);
             return false;
         }
 
         if (isPaused()) {
             ras.close();
             is.close();
-            postOnPause(bean.getOutFile());
+            postOnPause(bean);
             return false;
         }
         return true;

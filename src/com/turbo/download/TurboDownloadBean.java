@@ -13,6 +13,7 @@ public class TurboDownloadBean {
 	private long startPosition = 0;		//分片开始位置
 	private File outFile;				//目标文件
 	private long totoalSrcSize = 0L;	//目标资源的总大小
+	private String status = "";         //下载状态
 	
 	public TurboDownloadBean(String spec,long totalSrcSize,File outFile){
 		this.spec = spec;
@@ -60,5 +61,12 @@ public class TurboDownloadBean {
 	public void setTotoalSrcSize(long totoalSrcSize) {
 		this.totoalSrcSize = totoalSrcSize;
 	}
-	
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }

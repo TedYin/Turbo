@@ -560,7 +560,7 @@ public class VolleyNetHelper {
 		try {
 			URL url = new URL(spec);
 			conn = (HttpURLConnection) url.openConnection();
-			conn.setConnectTimeout(5000);
+			conn.setConnectTimeout(10000);
 			conn.connect();
 			length = conn.getContentLength();
 		} catch (MalformedURLException e) {
