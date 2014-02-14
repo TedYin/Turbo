@@ -157,7 +157,10 @@ import java.util.TimeZone;
  * </table>
  * 
  * 模式字母通常是重复的，其数量确定其精确表示：
- * 
+ * @author 来自网络
+ * @modify Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public final class DateUtil implements Serializable {
 	/**

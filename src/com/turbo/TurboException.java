@@ -1,8 +1,11 @@
 package com.turbo;
 
 /**
+ * TODO: 待完善
  * 异常类
  * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class TurboException extends Exception{
 

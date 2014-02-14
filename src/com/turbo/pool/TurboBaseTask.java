@@ -6,6 +6,8 @@ import com.turbo.TurboLog;
 /**
  * 任务接口
  * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public abstract class TurboBaseTask {
 	private boolean isCanceled = false;

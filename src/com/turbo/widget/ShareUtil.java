@@ -15,9 +15,9 @@ import android.widget.Toast;
 
 /**
  * 分享工具类
- * 
- * @author ted
- * 
+ * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class ShareUtil {
 
@@ -51,7 +51,7 @@ public class ShareUtil {
 		intent.setType("image/*");
 		intent.putExtra(Intent.EXTRA_TEXT, msg);
 		intent.putExtra(Intent.EXTRA_STREAM, uri);
-		context.startActivity(Intent.createChooser(intent, "分享三国合伙人"));
+		context.startActivity(Intent.createChooser(intent, "Turbo快速开发框架！"));
 	}
 
 	/**

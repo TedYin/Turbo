@@ -2,6 +2,12 @@ package com.turbo.pool;
 
 import com.turbo.TurboLog;
 
+/**
+ * 测试任务
+ * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
+ */
 public class TestTask extends TurboBaseTask {
 
 	@Override

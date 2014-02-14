@@ -6,6 +6,12 @@ import org.apache.http.HttpResponse;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**
+ * JSON 返回
+ * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
+ */
 public class TurboJSONResponse extends TurboBaseResponse<JSONObject>{
 
     public TurboJSONResponse(HttpResponse resp) {

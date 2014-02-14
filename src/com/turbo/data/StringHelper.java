@@ -1,8 +1,5 @@
 package com.turbo.data;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -11,8 +8,10 @@ import java.util.regex.Pattern;
 
 /**
  * 字符串工具
- * @author tedyin
- * @since 2013-08-02
+ * @author Ted
+ * @date 2013-08-02
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class StringHelper {
 	

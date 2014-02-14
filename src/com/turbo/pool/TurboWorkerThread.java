@@ -5,8 +5,9 @@ import com.turbo.TurboLog;
 
 /**
  * 工作线程模型
- * 
  * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 /* public */class TurboWorkerThread extends Thread {
 

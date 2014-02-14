@@ -17,6 +17,8 @@ import com.tedyin.turbo.R;
 
 /**
  * Created by castorflex on 11/10/13.
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 /*public*/ class SmoothProgressDrawable extends Drawable implements Animatable {
 

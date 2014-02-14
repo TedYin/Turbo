@@ -5,9 +5,11 @@ import com.turbo.pool.IQueue;
 import com.turbo.pool.TurboTaskQueue;
 
 /**
+ * TODO:待完善
  * Turbo功能类
  * @author Ted
- *
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class Turbo {
 	public static IQueue newTaskQueue(){

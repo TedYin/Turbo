@@ -10,6 +10,8 @@ import com.turbo.sensor.TurboSensorHelper.ActionType;
  * 重力加速感应事件监听器
  * @author Ted
  * @date 2013-06-04
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class AcceleratorListener implements SensorEventListener {
 	

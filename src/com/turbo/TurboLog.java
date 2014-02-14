@@ -2,6 +2,13 @@ package com.turbo;
 
 import android.util.Log;
 
+/**
+ * TODO:待完善
+ * Turbo日志类
+ * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
+ */
 public class TurboLog {
 	private static final String TAG = "Turbo";
 	public static int logLevel = Log.VERBOSE;

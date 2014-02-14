@@ -9,8 +9,9 @@ import android.content.Context;
 
 /**
  * Activity Service Receiver 管理类
- * 
  * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class TurboAppManager {
 	private static TurboAppManager instance = null;

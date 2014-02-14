@@ -12,7 +12,8 @@ import org.apache.http.protocol.HTTP;
 /**
  * 封装对URL的拼装等操作
  * @author Ted
- *
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class URLHelper {
 	/**

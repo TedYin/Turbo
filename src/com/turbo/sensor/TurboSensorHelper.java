@@ -9,6 +9,8 @@ import android.hardware.SensorManager;
  * 
  * @author Ted
  * @date 2013-06-04
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class TurboSensorHelper {
 	

@@ -1,20 +1,21 @@
 package com.turbo.common;
 
 import com.turbo.app.TurboBaseApp;
-import com.turbo.net.VolleyNetHelper;
-import com.turbo.net.VolleyNetHelper.NetCallBack;
+import com.turbo.net.TurboNetHelper;
+import com.turbo.net.TurboNetHelper.NetCallBack;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
 /**
- * 应用更新助手
+ * 应用更新助手类
  * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class TurboUpdateHelper {
     //网络助手
-    private static VolleyNetHelper helper = TurboBaseApp.getNetHellper();
+    private static TurboNetHelper helper = TurboBaseApp.getNetHellper();
     
     public interface UpdateCallBack{
         /**
@@ -68,6 +69,8 @@ public class TurboUpdateHelper {
     /**
      * 更新信息
      * @author Ted
+     * @mail water-cs@qq.com
+     * @version 1.0.0
      */
    static class TurboUpdateBean{
         private int versionCode;

@@ -14,6 +14,12 @@ import android.widget.Toast;
 import com.tedyin.turbo.R;
 import com.turbo.app.TurboBaseApp;
 
+/**
+ * 自定义Toast
+ * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
+ */
 public class TurboToast {
     
     //异步处理UI操作

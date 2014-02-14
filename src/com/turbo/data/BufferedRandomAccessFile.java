@@ -11,8 +11,10 @@ import java.io.RandomAccessFile;
  * <p>Copyright: Copyright (c) 2002 Cui Zhixiang </p>
  * <p>Company: soho </p>
  * @author Cui Zhixiang
- * @modify Ted
  * @version 1.0, 2002/10/12
+ * @modify Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 
 public class BufferedRandomAccessFile extends RandomAccessFile {

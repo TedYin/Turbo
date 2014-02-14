@@ -5,7 +5,8 @@ import com.turbo.TurboException;
 /**
  * 下载回调接口（根据不同状态来回调）
  * @author Ted
- *
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public interface ITurboDownloadCallBack {
 

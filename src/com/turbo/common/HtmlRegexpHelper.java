@@ -10,6 +10,10 @@ import java.util.regex.Pattern;
  * @author hejian
  * @version 1.0
  * @createtime 2006-10-16
+ * 
+ * @modify Ted
+ * @mail water-cs@qq.com 
+ * @version 1.0.0
  */
 public class HtmlRegexpHelper {
 	private final static String regxpForHtml = "<([^>]*)>"; // 过滤所有以<开头以>结尾的标签

@@ -23,6 +23,8 @@ import java.text.DecimalFormat;
  * 
  * @author Ted
  * @date 2013-03-10
+ * @mail water-cs@qq.com
+ * @version1.0.0
  */
 public class FileHelper {
 

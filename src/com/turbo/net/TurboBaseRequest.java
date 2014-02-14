@@ -3,7 +3,7 @@ package com.turbo.net;
 import android.os.Handler;
 import android.os.Looper;
 
-import com.turbo.net.VolleyNetHelper.NetCallBack;
+import com.turbo.net.TurboNetHelper.NetCallBack;
 import com.turbo.pool.TurboBaseTask;
 
 import org.apache.http.HttpEntity;
@@ -16,6 +16,8 @@ import java.util.Map;
 /**
  * 基础的请求封装
  * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public abstract class TurboBaseRequest<T> extends TurboBaseTask{
 	

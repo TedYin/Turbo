@@ -5,6 +5,8 @@ import java.io.File;
 /**
  * 下载信息实体类
  * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class TurboDownloadBean {
 	

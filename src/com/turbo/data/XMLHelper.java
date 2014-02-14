@@ -1,5 +1,13 @@
 package com.turbo.data;
 
+import android.util.Xml;
+
+import com.turbo.interfaces.ISAXParseHandler;
+
+import org.xml.sax.SAXException;
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -7,21 +15,28 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
-import org.xml.sax.SAXException;
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
-
-import android.util.Xml;
-
-import com.turbo.interfaces.IPullParserCallBack;
-import com.turbo.interfaces.ISAXParseHandler;
-
 /**
  * XML解析助手
  * @author Ted
- *
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class XMLHelper {
+    
+    /**
+     * Pull解析XML回调接口
+     * @author Ted
+     * @mail water-cs@qq.com
+     * @version 1.0.0
+     */
+    public interface IPullParserCallBack {
+        public void startDocCallBack();
+        public void startTagCallBack();
+        public void endTagCallBack();
+        public void endDocCallBack();
+        public boolean isCanInterrupt();
+    }
+    
 	
 	/**
 	 * 使用SAX解析XML
@@ -38,7 +53,6 @@ public class XMLHelper {
 		} catch (SAXException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	} 

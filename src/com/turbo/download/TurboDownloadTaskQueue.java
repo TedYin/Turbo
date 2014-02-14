@@ -5,6 +5,8 @@ import com.turbo.pool.TurboTaskQueue;
 /**
  * 下载任务队列
  * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 /*public*/ class TurboDownloadTaskQueue extends TurboTaskQueue{
     

@@ -10,6 +10,12 @@ import android.widget.TextView;
 
 import com.tedyin.turbo.R;
 
+/**
+ * ListView等的加载底部框
+ * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
+ */
 public class TurboLoadingFooter {
     protected View mLoadingFooter;
 

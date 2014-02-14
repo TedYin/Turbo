@@ -15,10 +15,10 @@ import java.util.Map;
 /**
  * 获取网络图片
  * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class TurboImageRequest extends TurboBaseRequest<Bitmap>{
-	
-	
 	
 	/**
 	 * TODO:思考缓存问题，此类目前不可用！

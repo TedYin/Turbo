@@ -19,6 +19,8 @@ import java.net.URL;
 /**
  * 下载执行类
  * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class TurboDownloadTask extends TurboBaseTask {
     private int READ_TIME_OUT = 20000;// 读取超时时间

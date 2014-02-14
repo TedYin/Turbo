@@ -12,9 +12,11 @@ import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 
 /**
- * 加密解密工具包
+ * 加密解密工具类
  * @author Ted
  * @date 2012-12-26
+ * @mail water-cs@qq.com    
+ * @version 1.0.0
  */
 public class CyptoUtils {
 

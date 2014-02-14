@@ -16,9 +16,10 @@ import com.turbo.view.TurboScrollLayout.OnViewChangeListener;
 import java.util.Map;
 
 /**
- * ScrollView 配置类
- * 
+ * ScrollLayout 配置类
  * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class TurboScrollViewHelper implements OnViewChangeListener, OnClickListener {
 

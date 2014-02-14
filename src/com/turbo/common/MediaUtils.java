@@ -6,56 +6,54 @@ import java.util.Map;
 import com.turbo.data.FileHelper;
 
 /** 
- * 媒体类型工具包
- * @author  @Cundong
- * @weibo   http://weibo.com/liucundong
- * @blog    http://www.liucundong.com
- * @date    Apr 29, 2011 2:50:48 PM
- * @version 1.0
+ * 媒体类型工具类
+ * @author  Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class MediaUtils
 {
-	private static Map<String, String> FORMAT_TO_CONTENTTYPE = new HashMap<String, String>();
+	private static Map<String, String> MEDIA_TYPE_MAP = new HashMap<String, String>();
 	
 	static
 	{
 		//音频
-		FORMAT_TO_CONTENTTYPE.put( "mp3", "audio" );
-		FORMAT_TO_CONTENTTYPE.put( "mid", "audio" );
-		FORMAT_TO_CONTENTTYPE.put( "midi", "audio" );
-		FORMAT_TO_CONTENTTYPE.put( "asf", "audio" );
-		FORMAT_TO_CONTENTTYPE.put( "wm", "audio" );
-		FORMAT_TO_CONTENTTYPE.put( "wma", "audio" );
-		FORMAT_TO_CONTENTTYPE.put( "wmd", "audio" );
-		FORMAT_TO_CONTENTTYPE.put( "amr", "audio" );
-		FORMAT_TO_CONTENTTYPE.put( "wav", "audio" );
-		FORMAT_TO_CONTENTTYPE.put( "3gpp", "audio" );
-		FORMAT_TO_CONTENTTYPE.put( "mod", "audio" );
-		FORMAT_TO_CONTENTTYPE.put( "mpc", "audio" );
+		MEDIA_TYPE_MAP.put( "mp3", "audio" );
+		MEDIA_TYPE_MAP.put( "mid", "audio" );
+		MEDIA_TYPE_MAP.put( "midi", "audio" );
+		MEDIA_TYPE_MAP.put( "asf", "audio" );
+		MEDIA_TYPE_MAP.put( "wm", "audio" );
+		MEDIA_TYPE_MAP.put( "wma", "audio" );
+		MEDIA_TYPE_MAP.put( "wmd", "audio" );
+		MEDIA_TYPE_MAP.put( "amr", "audio" );
+		MEDIA_TYPE_MAP.put( "wav", "audio" );
+		MEDIA_TYPE_MAP.put( "3gpp", "audio" );
+		MEDIA_TYPE_MAP.put( "mod", "audio" );
+		MEDIA_TYPE_MAP.put( "mpc", "audio" );
 		
 		//视频
-		FORMAT_TO_CONTENTTYPE.put( "fla", "video" );
-		FORMAT_TO_CONTENTTYPE.put( "flv", "video" );
-		FORMAT_TO_CONTENTTYPE.put( "wav", "video" );
-		FORMAT_TO_CONTENTTYPE.put( "wmv", "video" );
-		FORMAT_TO_CONTENTTYPE.put( "avi", "video" );
-		FORMAT_TO_CONTENTTYPE.put( "rm", "video" );
-		FORMAT_TO_CONTENTTYPE.put( "rmvb", "video" );
-		FORMAT_TO_CONTENTTYPE.put( "3gp", "video" );
-		FORMAT_TO_CONTENTTYPE.put( "mp4", "video" );
-		FORMAT_TO_CONTENTTYPE.put( "mov", "video" );
+		MEDIA_TYPE_MAP.put( "fla", "video" );
+		MEDIA_TYPE_MAP.put( "flv", "video" );
+		MEDIA_TYPE_MAP.put( "wav", "video" );
+		MEDIA_TYPE_MAP.put( "wmv", "video" );
+		MEDIA_TYPE_MAP.put( "avi", "video" );
+		MEDIA_TYPE_MAP.put( "rm", "video" );
+		MEDIA_TYPE_MAP.put( "rmvb", "video" );
+		MEDIA_TYPE_MAP.put( "3gp", "video" );
+		MEDIA_TYPE_MAP.put( "mp4", "video" );
+		MEDIA_TYPE_MAP.put( "mov", "video" );
 		
 		//flash
-		FORMAT_TO_CONTENTTYPE.put( "swf", "video" );
+		MEDIA_TYPE_MAP.put( "swf", "video" );
 		
-		FORMAT_TO_CONTENTTYPE.put( "null", "video" );
+		MEDIA_TYPE_MAP.put( "null", "video" );
 		
 		//图片
-		FORMAT_TO_CONTENTTYPE.put( "jpg", "photo" );
-		FORMAT_TO_CONTENTTYPE.put( "jpeg", "photo" );
-		FORMAT_TO_CONTENTTYPE.put( "png", "photo" );
-		FORMAT_TO_CONTENTTYPE.put( "bmp", "photo" );
-		FORMAT_TO_CONTENTTYPE.put( "gif", "photo" );
+		MEDIA_TYPE_MAP.put( "jpg", "photo" );
+		MEDIA_TYPE_MAP.put( "jpeg", "photo" );
+		MEDIA_TYPE_MAP.put( "png", "photo" );
+		MEDIA_TYPE_MAP.put( "bmp", "photo" );
+		MEDIA_TYPE_MAP.put( "gif", "photo" );
 	}
 	
 	/**
@@ -65,11 +63,11 @@ public class MediaUtils
 	 */
 	public static String getContentType( String attFormat )
 	{
-		String contentType = FORMAT_TO_CONTENTTYPE.get("null");
+		String contentType = MEDIA_TYPE_MAP.get("null");
 		
 		if ( attFormat != null ) 
 		{
-			contentType = (String)FORMAT_TO_CONTENTTYPE.get( attFormat.toLowerCase() );
+			contentType = (String)MEDIA_TYPE_MAP.get( attFormat.toLowerCase() );
 		}
 		return contentType;
 	}

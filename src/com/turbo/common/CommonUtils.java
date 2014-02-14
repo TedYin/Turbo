@@ -32,9 +32,10 @@ import com.turbo.data.StringHelper;
 
 /**
  * 常用工具类
- * 
  * @author Ted
- * @since 2013-03-04
+ * @date 2013-03-04
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public final class CommonUtils {
 

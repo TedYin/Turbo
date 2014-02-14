@@ -5,6 +5,8 @@ import java.util.LinkedList;
 /**
  * 默认任务队列
  * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class TurboTaskQueue implements IQueue{
 

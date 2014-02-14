@@ -2,6 +2,12 @@ package com.turbo.pool;
 
 import java.util.Vector;
 
+/**
+ * 线程池
+ * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
+ */
 /*public*/class TurboThreadPool implements IPool {
 
 	private static int minPoolSize;

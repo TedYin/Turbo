@@ -15,6 +15,9 @@ import com.tedyin.turbo.R;
 
 /**
  * Created by castorflex on 11/10/13.
+ * @modify Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class SmoothProgressBar extends ProgressBar {
 

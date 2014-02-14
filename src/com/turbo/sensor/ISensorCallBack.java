@@ -6,6 +6,8 @@ import android.hardware.SensorEvent;
  * 传感器回调函数
  * @author Ted
  * @date 2013-06-04
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public interface ISensorCallBack {
 

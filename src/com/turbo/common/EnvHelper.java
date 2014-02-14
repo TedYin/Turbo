@@ -10,6 +10,8 @@ import android.os.Environment;
  * 手机状态工具类
  * @author Ted
  * @date 2013-04-06
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class EnvHelper {
 	/**

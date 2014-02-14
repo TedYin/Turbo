@@ -3,7 +3,8 @@ package com.turbo.pool;
 /**
  * 线程池接口
  * @author Ted
- *
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public interface IPool {
 	/**

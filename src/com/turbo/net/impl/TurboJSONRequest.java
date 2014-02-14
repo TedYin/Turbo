@@ -4,7 +4,7 @@ package com.turbo.net.impl;
 import com.turbo.common.URLHelper;
 import com.turbo.net.TurboBaseRequest;
 import com.turbo.net.TurboNetworkUtil;
-import com.turbo.net.VolleyNetHelper.NetCallBack;
+import com.turbo.net.TurboNetHelper.NetCallBack;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -19,7 +19,8 @@ import java.util.Map;
 /**
  * 做JSON请求
  * @author Ted
- *
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class TurboJSONRequest extends TurboBaseRequest<TurboJSONResponse> {
 

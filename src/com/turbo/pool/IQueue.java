@@ -1,5 +1,11 @@
 package com.turbo.pool;
 
+/**
+ * 任务队列接口
+ * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
+ */
 public interface IQueue {
 	
 	/**

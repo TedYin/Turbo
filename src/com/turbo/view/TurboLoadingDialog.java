@@ -13,6 +13,12 @@ import android.widget.TextView;
 
 import com.tedyin.turbo.R;
 
+/**
+ * Loading加载对话框
+ * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
+ */
 public class TurboLoadingDialog extends Dialog{
 
 	/**

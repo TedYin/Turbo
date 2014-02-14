@@ -14,7 +14,8 @@ import com.turbo.app.TurboBaseApp;
 /**
  * 属性文件工具类
  * @author Ted
- * @mail tedworld.time@gmail.com
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class PropertiesHelper {
 	

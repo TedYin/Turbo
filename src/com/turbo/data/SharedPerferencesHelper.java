@@ -8,7 +8,8 @@ import android.content.SharedPreferences;
 /**
  * SharedPerferences助手
  * @author Ted
- * @mail tedworld.time@gmail.com
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class SharedPerferencesHelper {
 	

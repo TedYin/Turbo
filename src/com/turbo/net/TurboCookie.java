@@ -9,6 +9,8 @@ import org.json.JSONObject;
 /**
  * Cookie信息封装类
  * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class TurboCookie{
 

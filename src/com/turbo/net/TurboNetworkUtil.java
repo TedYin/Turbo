@@ -27,9 +27,10 @@ import com.turbo.app.TurboBaseApp;
 import com.turbo.common.EnvHelper;
 
 /**
- * 封装应答数据
+ * 网络模块工具类
  * @author Ted
- *
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public class TurboNetworkUtil {
 	

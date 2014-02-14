@@ -9,8 +9,9 @@ import java.util.Map;
 
 /**
  * 返回数据封装基础类
- * 
  * @author Ted
+ * @mail water-cs@qq.com
+ * @version 1.0.0
  */
 public abstract class TurboBaseResponse<T> {
     private HttpResponse resp;
