@@ -2,9 +2,8 @@ package com.turbo.data;
 
 import android.util.Xml;
 
-import com.turbo.interfaces.ISAXParseHandler;
-
 import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -36,6 +35,17 @@ public class XMLHelper {
         public void endDocCallBack();
         public boolean isCanInterrupt();
     }
+    
+    /**
+     * TODO:该类是否必要需要考虑
+    * SAX解析XML处理类
+    * @author Ted
+    * @mail water-cs@qq.com
+    * @version 1.0.0
+    */
+    public class ISAXParseHandler extends DefaultHandler{
+    }
+
     
 	
 	/**
